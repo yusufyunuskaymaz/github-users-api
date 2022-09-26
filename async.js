@@ -11,11 +11,14 @@ users()
 
 
 const updateDom = (data) => {
+    const usersDiv =  document.querySelector(".users")
 
     data.forEach(user => {
-        document.querySelector(".users").innerHTML += `
+        usersDiv.innerHTML += `
+        <div class="col-lg-4">
         <img width="200" src="${user.avatar_url}">
         <p><i>${user.login}</i></p>
+        </div>
     `
     });
     

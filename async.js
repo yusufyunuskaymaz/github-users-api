@@ -7,7 +7,6 @@ const users = async () => {
     const data = await res.json()
     updateDom(data)
 }
-users()
 
 
 const updateDom = (data) => {
@@ -24,3 +23,5 @@ const updateDom = (data) => {
     
     
 }
+
+window.addEventListener("load", users)
